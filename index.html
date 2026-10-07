@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Surprise ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         FIRST SCREEN
+    ========================== -->
+
+    <div class="container screen active" id="mainScreen">
+
+        <div class="teddy-container">
+            <img
+                src="teddy.png"
+                class="teddy"
+                id="teddy"
+                alt="Cute teddy bear"
+            >
+        </div>
+
+        <h1>Hey handsome... 👀❤️</h1>
+
+        <p id="message">
+            Someone left something special for you.
+        </p>
+
+        <button id="startButton" onclick="startSurprise()">
+            Open it ❤️
+        </button>
+
+        <audio
+            id="teddyVoice"
+            src="teddy-message.aac"
+            preload="auto">
+        </audio>
+
+    </div>
+
+
+    <!-- =========================
+         COOKING SCREEN
+    ========================== -->
+
+    <div class="container screen" id="cookingScreen">
+
+        <div class="emoji">
+            👨🏽‍🍳❤️
+        </div>
+
+        <h1>Okay handsome...</h1>
+
+        <p>
+            Since you have my attention now,
+            I have one very important question for you. 👀
+        </p>
+
+        <h2>
+            Sooo... what are you cooking for me? 😌
+        </h2>
+
+        <div class="choices">
+
+            <button onclick="chooseFood('sweet')">
+                Something sweet 🍰
+            </button>
+
+            <button onclick="chooseFood('spicy')">
+                Something spicy 🌶️
+            </button>
+
+            <button onclick="chooseFood('you')">
+                You? 👀
+            </button>
+
+        </div>
+
+        <p id="reply"></p>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

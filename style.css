@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #fff0f5,
+        #ffe1eb,
+        #fff8fa
+    );
+
+    color: #4a1f2d;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 450px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    padding: 35px 25px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(100, 30, 60, 0.15);
+}
+
+
+/* =========================
+   SCREEN CONTROL
+========================= */
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+
+/* =========================
+   TEDDY
+========================= */
+
+.teddy-container {
+    margin-bottom: 20px;
+
+    animation: float 2s ease-in-out infinite;
+}
+
+.teddy {
+    width: 220px;
+    max-width: 70vw;
+}
+
+
+/* Teddy talking */
+
+.teddy.talking {
+    animation: talking 0.35s ease-in-out infinite;
+}
+
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes talking {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 22px;
+    line-height: 1.4;
+
+    margin: 20px 0;
+}
+
+p {
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+
+    background: #d94f78;
+
+    color: white;
+
+    padding: 14px 24px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    margin: 7px;
+
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #c83e68;
+
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   COOKING SCREEN
+========================= */
+
+.emoji {
+    font-size: 75px;
+
+    margin-bottom: 15px;
+
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================
+   FOOD BUTTONS
+========================= */
+
+.choices {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.choices button {
+    width: 100%;
+
+    margin: 0;
+}
+
+
+/* =========================
+   COMEBACK
+========================= */
+
+#reply {
+    margin-top: 25px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #c83262;
+}
